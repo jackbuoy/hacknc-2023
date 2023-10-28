@@ -21,9 +21,9 @@ struct RandomDestination: View {
 
     var body: some View {
         VStack {
-//            Map()
-//                .frame(width: 300, height: 400)
-//                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            Map()
+                .frame(width: 300, height: 400)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
 
             HStack {
                 Text("What Continent would you like to Explore?")
@@ -52,21 +52,21 @@ struct RandomDestination: View {
             
             
 
-            VStack {
-                TextField("Enter text here", text: $userInput)
-                    .textFieldStyle(RoundedBorderTextFieldStyle()) // Apply a rounded border to the text field
-
-                Button(action: {
-                    chatGPTResponse = vm.turnInputintoGPT(stringToGPT: userInput)
-                    chatGPTResponse = vm.chatGPTResponse()
-
-                }, label: {
-                    Text("Button")
-                })
-
-                Text(chatGPTResponse)
-                    .padding()
-            }
+//            VStack {
+//                TextField("Enter text here", text: $userInput)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle()) // Apply a rounded border to the text field
+//
+//                Button(action: {
+//                    chatGPTResponse = vm.turnInputintoGPT(stringToGPT: userInput)
+//                    chatGPTResponse = vm.chatGPTResponse()
+//
+//                }, label: {
+//                    Text("Button")
+//                })
+//
+//                Text(chatGPTResponse)
+//                    .padding()
+//            }
         }
     }
 }
