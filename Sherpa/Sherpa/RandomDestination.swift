@@ -15,6 +15,8 @@ enum Continent: String, CaseIterable, Identifiable {
 
 struct RandomDestination: View {
     @State private var selectedCountry: Continent = .Anywhere
+    @State private var userInput: String = "" // This will store the user's input
+    @State private var chatGPTResponse: String = "" // Store the ChatGPT response
 
     var body: some View {
         VStack {
@@ -26,6 +28,7 @@ struct RandomDestination: View {
                 Text("What Continent would you like to Explore?")
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
+                    
 
                 Picker("What Continent", selection: $selectedCountry) {
                     Text("North America").tag(Continent.NorthAmerica)
@@ -37,12 +40,27 @@ struct RandomDestination: View {
                     Text("Anywhere").tag(Continent.Anywhere)
                     Text("Africa").tag(Continent.Africa)
                 }
-                
+                TextField("Enter text here", text: $userInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle()) // Apply a rounded border to the text field
+
                 Button(action: {
                     sayhello(continent: selectedCountry)
                 }, label: {
                     Text("Button")
                 })
+
+                
+                Button(action: {
+                    turnInputintoGPT(stringToGPT: userInput)
+                    chatGPTResponse()
+                    
+                }, label: {
+                    Text("Button")
+                })
+
+               Text(chatGPTResponse)
+                    .padding()
+                
             }
         }
     }
