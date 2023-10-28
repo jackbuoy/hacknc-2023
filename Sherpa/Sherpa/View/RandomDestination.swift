@@ -15,12 +15,15 @@ enum Continent: String, CaseIterable, Identifiable {
 
 struct RandomDestination: View {
     @State private var selectedCountry: Continent = .Anywhere
+    @State private var userInput: String = "" // This will store the user's input
+    @State private var chatGPTResponse: String = "" // Store the ChatGPT response
+    private var vm: Backend = Backend()
 
     var body: some View {
         VStack {
-            Map()
-                .frame(width: 300, height: 400)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+//            Map()
+//                .frame(width: 300, height: 400)
+//                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
 
             HStack {
                 Text("What Continent would you like to Explore?")
@@ -37,6 +40,32 @@ struct RandomDestination: View {
                     Text("Anywhere").tag(Continent.Anywhere)
                     Text("Africa").tag(Continent.Africa)
                 }
+            }
+            
+            NavigationLink(destination: {
+                TripSuggestions()
+            }, label: {
+                Text("See Suggestions ")
+                // add clipshape in order to get it to be a rounded Button
+
+            })
+            
+            
+
+            VStack {
+                TextField("Enter text here", text: $userInput)
+                    .textFieldStyle(RoundedBorderTextFieldStyle()) // Apply a rounded border to the text field
+
+                Button(action: {
+                    chatGPTResponse = vm.turnInputintoGPT(stringToGPT: userInput)
+                    chatGPTResponse = vm.chatGPTResponse()
+
+                }, label: {
+                    Text("Button")
+                })
+
+                Text(chatGPTResponse)
+                    .padding()
             }
         }
     }

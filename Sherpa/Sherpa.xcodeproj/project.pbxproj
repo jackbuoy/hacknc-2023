@@ -17,6 +17,11 @@
 		A8B432612AED911800F5F954 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432602AED911800F5F954 /* Backend.swift */; };
 		A8B432632AED9B1B00F5F954 /* IndividualTripSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */; };
 		A8B432652AED9B2F00F5F954 /* TripSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */; };
+		A8B432672AEDAB0B00F5F954 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432662AEDAB0B00F5F954 /* Package.swift */; };
+		A8B4326A2AEDAB6B00F5F954 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = A8B432692AEDAB6B00F5F954 /* OpenAI */; };
+		A8B4326E2AEDB61400F5F954 /* CompletionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */; };
+		A8B432712AEDBDDC00F5F954 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432702AEDBDDC00F5F954 /* Itinerary.swift */; };
+		A8B432732AEDBE2200F5F954 /* DailyItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,10 @@
 		A8B432602AED911800F5F954 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTripSuggestion.swift; sourceTree = "<group>"; };
 		A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSuggestions.swift; sourceTree = "<group>"; };
+		A8B432662AEDAB0B00F5F954 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionsResult.swift; sourceTree = "<group>"; };
+		A8B432702AEDBDDC00F5F954 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
+		A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItinerary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B4326A2AEDAB6B00F5F954 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,13 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				A8B4324C2AED8C9500F5F954 /* SherpaApp.swift */,
-				A8B4324E2AED8C9500F5F954 /* ContentView.swift */,
-				A8B4325A2AED8CE900F5F954 /* Screen2.swift */,
-				A8B4325C2AED8D1100F5F954 /* ConfirmedDestination.swift */,
 				A8B432602AED911800F5F954 /* Backend.swift */,
-				A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */,
-				A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */,
-				A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */,
+				A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */,
+				A8B4326F2AEDB62000F5F954 /* View */,
+				A8B432662AEDAB0B00F5F954 /* Package.swift */,
 				A8B432502AED8C9900F5F954 /* Assets.xcassets */,
 				A8B432522AED8C9900F5F954 /* Preview Content */,
 			);
@@ -83,6 +90,21 @@
 				A8B432532AED8C9900F5F954 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8B4326F2AEDB62000F5F954 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8B4324E2AED8C9500F5F954 /* ContentView.swift */,
+				A8B4325A2AED8CE900F5F954 /* Screen2.swift */,
+				A8B4325C2AED8D1100F5F954 /* ConfirmedDestination.swift */,
+				A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */,
+				A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */,
+				A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */,
+				A8B432702AEDBDDC00F5F954 /* Itinerary.swift */,
+				A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +123,9 @@
 			dependencies = (
 			);
 			name = Sherpa;
+			packageProductDependencies = (
+				A8B432692AEDAB6B00F5F954 /* OpenAI */,
+			);
 			productName = Sherpa;
 			productReference = A8B432492AED8C9500F5F954 /* Sherpa.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +154,9 @@
 				Base,
 			);
 			mainGroup = A8B432402AED8C9500F5F954;
+			packageReferences = (
+				A8B432682AEDAB6B00F5F954 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = A8B4324A2AED8C9500F5F954 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,12 +184,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B4325B2AED8CE900F5F954 /* Screen2.swift in Sources */,
+				A8B432732AEDBE2200F5F954 /* DailyItinerary.swift in Sources */,
 				A8B4324F2AED8C9500F5F954 /* ContentView.swift in Sources */,
 				A8B432652AED9B2F00F5F954 /* TripSuggestions.swift in Sources */,
+				A8B432672AEDAB0B00F5F954 /* Package.swift in Sources */,
+				A8B432712AEDBDDC00F5F954 /* Itinerary.swift in Sources */,
 				A8B432612AED911800F5F954 /* Backend.swift in Sources */,
 				A8B4325D2AED8D1100F5F954 /* ConfirmedDestination.swift in Sources */,
 				A8B432632AED9B1B00F5F954 /* IndividualTripSuggestion.swift in Sources */,
 				A8B4325F2AED8D1A00F5F954 /* RandomDestination.swift in Sources */,
+				A8B4326E2AEDB61400F5F954 /* CompletionsResult.swift in Sources */,
 				A8B4324D2AED8C9500F5F954 /* SherpaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8B432682AEDAB6B00F5F954 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8B432692AEDAB6B00F5F954 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8B432682AEDAB6B00F5F954 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8B432412AED8C9500F5F954 /* Project object */;
 }
