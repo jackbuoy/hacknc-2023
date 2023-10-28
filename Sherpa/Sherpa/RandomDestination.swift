@@ -37,12 +37,6 @@ struct RandomDestination: View {
                     Text("Anywhere").tag(Continent.Anywhere)
                     Text("Africa").tag(Continent.Africa)
                 }
-                
-                Button(action: {
-                    sayhello(continent: selectedCountry)
-                }, label: {
-                    Text("Button")
-                })
             }
         }
     }
