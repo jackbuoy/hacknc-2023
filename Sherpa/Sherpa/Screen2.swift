@@ -11,7 +11,7 @@ struct Screen2: View {
     var body: some View {
         VStack {
             NavigationLink(destination: {
-                Screen2()
+                ConfirmedDestination()
             }, label: {
                 Text("I have a destination in mind")
                 // add clipshape in order to get it to be a rounded Button
@@ -19,7 +19,7 @@ struct Screen2: View {
             })
 
             NavigationLink(destination: {
-                Screen2()
+                RandomDestination()
             }, label: {
                 Text("Take me wherever ")
                 // add clipshape in order to get it to be a rounded Button
