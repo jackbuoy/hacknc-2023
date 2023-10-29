@@ -8,17 +8,42 @@
 import SwiftUI
 
 struct Result: View {
+    @StateObject var resultVM: ResultViewModel = .init()
     
     var vacationDays: [Date] = []
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack(spacing: 15, pinnedViews: [.sectionHeaders]) {
+                self.HeaderView()
                 Section {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10){
-                            
+                        HStack(spacing: 10) {
+                            ForEach(self.resultVM.currentWeek, id: \.self) { day in
+                                
+                                Button {
+                                    //change what part of the itinerary is shown
+                                } label: {
+                                    VStack(spacing: 10) {
+                                        Text(self.resultVM.extractDate(date: day, format: "dd"))
+                                            .font(.system(size: 14))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text(self.resultVM.extractDate(date: day, format: "EEE"))
+                                            .font(.system(size: 14))
+                                    }
+                                    .foregroundColor(.white)
+                                    .frame(width: 45, height: 90)
+                                    .background(
+                                        ZStack {
+                                            Capsule().fill(.black)
+                                        })
+                                }
+
+                              
+                            }
                         }
+                        .padding(.horizontal)
                     }
                 } header: {}
             }
