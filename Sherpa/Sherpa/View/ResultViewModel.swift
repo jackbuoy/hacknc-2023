@@ -16,6 +16,60 @@ class ResultViewModel: ObservableObject {
     
     @Published var day = 0
     
+    @Published var romeItinerary: [[[String]]] = [
+        [
+            ["Visit the Colosseum"],
+            ["Explore the Roman Forum"],
+            ["Dine at a traditional Roman trattoria"]
+        ],
+        [
+            ["Tour the Vatican Museums"],
+            ["Visit St. Peter's Basilica"],
+            ["Savor gelato at the Trevi Fountain"]
+        ],
+        [
+            ["Explore the Pantheon"],
+            ["Wander through Piazza Navona"],
+            ["Enjoy a Roman opera performance"]
+        ],
+        [
+            ["Discover the historic Palatine Hill"],
+            ["Shop for souvenirs at Campo de' Fiori"],
+            ["Indulge in pizza at a local pizzeria"]
+        ],
+        [
+            ["Visit the Capitoline Museums"],
+            ["Stroll through Villa Borghese gardens"],
+            ["Experience Roman nightlife at Trastevere"]
+        ],
+        [
+            ["Explore the Baths of Caracalla"],
+            ["Take a guided tour of the Catacombs"],
+            ["Sip wine at a wine bar in Monti"]
+        ],
+        [
+            ["Day trip to Pompeii and Mount Vesuvius"],
+            ["Discover the ancient city of Pompeii"],
+            ["Hike to the summit of Mount Vesuvius"]
+        ],
+        [
+            ["Visit the Castel Sant'Angelo"],
+            ["Walk across the Tiber to Trastevere"],
+            ["Dine along the Tiber River"]
+        ],
+        [
+            ["Explore the Galleria Borghese"],
+            ["Visit the Capuchin Crypt"],
+            ["Savor pasta at a traditional Roman restaurant"]
+        ],
+        [
+            ["Day trip to Tivoli: Villa d'Este and Hadrian's Villa"],
+            ["Explore the magnificent gardens of Villa d'Este"],
+            ["Learn about ancient Roman history at Hadrian's Villa"]
+        ]
+    ]
+
+
     @Published var storedActivities = [
         [
             ["Visit the North Carolina Research Campus"],
@@ -69,7 +123,6 @@ class ResultViewModel: ObservableObject {
         ]
     ]
 
-
     init() {
         fetchCurrentWeek()
         // filterTodayTasks()
@@ -115,17 +168,20 @@ class ResultViewModel: ObservableObject {
         return calendar.isDate(currentDay, inSameDayAs: date)
     }
     
-    func changeDate(){
-        if day == 9{
+    func changeDate() {
+        if day == 9 {
             day = 0
         }
-        else{
+        else {
             day = day + 1
         }
     }
     
-    func getTasks(timeOfDay: Int)->String{
+    func getTasks(timeOfDay: Int) -> String {
         return storedActivities[day][timeOfDay][0]
-        
+    }
+    
+    func getRomeTasks(timeOfDay: Int) -> String {
+        return romeItinerary[day][timeOfDay][0]
     }
 }

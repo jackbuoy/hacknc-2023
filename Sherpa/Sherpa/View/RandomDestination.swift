@@ -54,7 +54,7 @@ struct RandomDestination: View {
                 .scrollContentBackground(.hidden)
 
                 NavigationLink(destination: {
-                    Result()
+                    RandomResult()
                 }, label: {
                     Text("See Suggestions ")
                         .foregroundColor(.darkBlue)

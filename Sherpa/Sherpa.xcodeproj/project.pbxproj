@@ -25,6 +25,7 @@
 		A8B4329B2AEDF60700F5F954 /* gptFunctionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */; };
 		A8B4329D2AEE03EC00F5F954 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329C2AEE03EC00F5F954 /* Result.swift */; };
 		A8B4329F2AEE0B8E00F5F954 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */; };
+		A8B432A12AEEB1C000F5F954 /* RandomResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432A02AEEB1C000F5F954 /* RandomResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptFunctionStruct.swift; sourceTree = "<group>"; };
 		A8B4329C2AEE03EC00F5F954 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		A8B432A02AEEB1C000F5F954 /* RandomResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				A8B432702AEDBDDC00F5F954 /* Itinerary.swift */,
 				A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */,
 				A8B4329C2AEE03EC00F5F954 /* Result.swift */,
+				A8B432A02AEEB1C000F5F954 /* RandomResult.swift */,
 				A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */,
 			);
 			path = View;
@@ -205,6 +208,7 @@
 				A8B4325D2AED8D1100F5F954 /* ConfirmedDestination.swift in Sources */,
 				A8B432632AED9B1B00F5F954 /* IndividualTripSuggestion.swift in Sources */,
 				A8B4325F2AED8D1A00F5F954 /* RandomDestination.swift in Sources */,
+				A8B432A12AEEB1C000F5F954 /* RandomResult.swift in Sources */,
 				A8B432992AEDF5D700F5F954 /* gptFunction.swift in Sources */,
 				A8B4324D2AED8C9500F5F954 /* SherpaApp.swift in Sources */,
 			);
