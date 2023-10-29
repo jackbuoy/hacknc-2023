@@ -11,16 +11,6 @@ class gptFunction {
     public var response: String = ""
     public var loadedData: [OpenAIResponse] = []
 
-//    func decode(data: Data) {
-//        let decoder = JSONDecoder()
-//
-//        guard let decodedData = try decoder.decode(OpenAIResponse.self, from: data) else {
-//            fatalError("bitch")
-//        }
-//
-//        print(decodedData.choices)
-//    }
-
     func sendRequestToOpenAI() {
         let openaiApiKey = "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"
 

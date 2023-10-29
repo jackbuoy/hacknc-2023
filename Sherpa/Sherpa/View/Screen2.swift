@@ -10,19 +10,8 @@ import SwiftUI
 struct Screen2: View {
     var body: some View {
         ZStack {
-            Color.darkBlue
+            Color.darkBlue.opacity(0.8)
                 .ignoresSafeArea()
-            VStack {
-                Spacer()
-                HStack {
-                    Image(.mountainOnly)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(minWidth: 0, maxWidth: 200)
-                        .edgesIgnoringSafeArea(.all)
-                    Spacer()
-                }
-            }
             
             VStack(spacing: 90) {
                 NavigationLink(destination: {

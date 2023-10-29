@@ -23,6 +23,8 @@
 		A8B432972AEDF5B500F5F954 /* GPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432962AEDF5B500F5F954 /* GPTView.swift */; };
 		A8B432992AEDF5D700F5F954 /* gptFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432982AEDF5D700F5F954 /* gptFunction.swift */; };
 		A8B4329B2AEDF60700F5F954 /* gptFunctionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */; };
+		A8B4329D2AEE03EC00F5F954 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329C2AEE03EC00F5F954 /* Result.swift */; };
+		A8B4329F2AEE0B8E00F5F954 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		A8B432962AEDF5B500F5F954 /* GPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTView.swift; sourceTree = "<group>"; };
 		A8B432982AEDF5D700F5F954 /* gptFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptFunction.swift; sourceTree = "<group>"; };
 		A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptFunctionStruct.swift; sourceTree = "<group>"; };
+		A8B4329C2AEE03EC00F5F954 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */,
 				A8B432702AEDBDDC00F5F954 /* Itinerary.swift */,
 				A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */,
+				A8B4329C2AEE03EC00F5F954 /* Result.swift */,
+				A8B4329E2AEE0B8E00F5F954 /* ResultViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,9 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B4329B2AEDF60700F5F954 /* gptFunctionStruct.swift in Sources */,
+				A8B4329F2AEE0B8E00F5F954 /* ResultViewModel.swift in Sources */,
 				A8B432972AEDF5B500F5F954 /* GPTView.swift in Sources */,
 				A8B4325B2AED8CE900F5F954 /* Screen2.swift in Sources */,
 				A8B432732AEDBE2200F5F954 /* DailyItinerary.swift in Sources */,
+				A8B4329D2AEE03EC00F5F954 /* Result.swift in Sources */,
 				A8B4324F2AED8C9500F5F954 /* ContentView.swift in Sources */,
 				A8B432652AED9B2F00F5F954 /* TripSuggestions.swift in Sources */,
 				A8B432672AEDAB0B00F5F954 /* Package.swift in Sources */,

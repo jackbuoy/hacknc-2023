@@ -12,15 +12,32 @@ struct DailyItinerary: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 320, height: 420)
+                .frame(width: 320, height: 620)
                 .clipShape(RoundedRectangle(cornerRadius: 30))
-                .foregroundColor(Color.blue.opacity(0.9))
+                .foregroundColor(Color.white.opacity(0.9))
                 .shadow(radius: 4)
             VStack {
-                Text("Day \(date)")
-                    .font(.largeTitle)
+                Text("Monday December 25")
+                    .font(.title)
                     .bold()
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.darkBlue)
+                
+                
+                HStack{
+                    Text("Morning")
+                    Text("Morning Activities")
+                }
+                HStack{
+                    Text("Afternoon")
+                    Text("Afternoon Activities")
+                }
+                HStack{
+                    Text("Evening")
+                    Text("Evening Activities")
+                }
+             
+    
+              
                 Image(.sherpaLogo)
                     .resizable()
                     .frame(width: 250, height: 250)

@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct Itinerary: View {
+    @State var days = 3
     var body: some View {
-        VStack{
-            
+        ZStack {
+            Color.darkBlue.opacity(0.7)
+                .ignoresSafeArea()
+
+            TabView {
+                ForEach(0..<days){_ in
+                    DailyItinerary()
+                }
+            }
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
         }
     }
 }

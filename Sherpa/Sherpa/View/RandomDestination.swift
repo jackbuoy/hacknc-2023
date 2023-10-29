@@ -15,41 +15,18 @@ enum Continent: String, CaseIterable, Identifiable {
 
 struct RandomDestination: View {
     @State private var selectedCountry: Continent = .Anywhere
-    @State private var dates: Set<DateComponents> = []
-
-  
-
-    @State private var userInput: String = "" // This will store the user's input
-    @State private var chatGPTResponse: String = "" // Store the ChatGPT response
-    private var vm: Backend = .init()
-
+    @State private var startDate = Date.now
+    @State private var endDate = Date.now
+    
     var body: some View {
         ZStack {
-            Color.darkBlue
+            Color.darkBlue.opacity(0.7)
                 .ignoresSafeArea()
-            VStack {
-                Spacer()
-                HStack {
-                    Image(.mountainOnly)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(minWidth: 0, maxWidth: 200)
-                        .edgesIgnoringSafeArea(.all)
-                    Spacer()
-                }
-            }
+            
             VStack(spacing: 30) {
-                Map()
-                    .frame(width: 350, height: 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
-
-                HStack {
-                    Text("What Continent would you like to Explore?")
-                        .foregroundStyle(.white)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.center)
-
-                    Picker("What Continent", selection: $selectedCountry) {
+                Spacer()
+                List {
+                    Picker("What Continent would you like to explore?", selection: $selectedCountry) {
                         Text("North America").tag(Continent.NorthAmerica)
                         Text("South America").tag(Continent.SouthAmerica)
                         Text("Asia").tag(Continent.Asia)
@@ -59,12 +36,22 @@ struct RandomDestination: View {
                         Text("Anywhere").tag(Continent.Anywhere)
                         Text("Africa").tag(Continent.Africa)
                     }
-                    .tint(.white)
-                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.darkBlue)
+                    .padding(20)
+                    
+                    DatePicker("Trip Start", selection: $startDate, displayedComponents: .date)
+                        .foregroundStyle(.darkBlue)
+                        .tint(.darkBlue)
+                        .padding(20)
+                   
+                    DatePicker("Trip End", selection: $endDate, displayedComponents: .date)
+                        .foregroundStyle(.darkBlue)
+                        .tint(.darkBlue)
+                        .padding(20)
+                       
                 }
-
-                MultiDatePicker("Select Time Frame", selection: $dates)
-
+                .scrollContentBackground(.hidden)
 
                 NavigationLink(destination: {
                     TripSuggestions()
@@ -77,22 +64,6 @@ struct RandomDestination: View {
                         .background(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                 })
-
-                //            VStack {
-                //                TextField("Enter text here", text: $userInput)
-                //                    .textFieldStyle(RoundedBorderTextFieldStyle()) // Apply a rounded border to the text field
-                //
-                //                Button(action: {
-                //                    chatGPTResponse = vm.turnInputintoGPT(stringToGPT: userInput)
-                //                    chatGPTResponse = vm.chatGPTResponse()
-                //
-                //                }, label: {
-                //                    Text("Button")
-                //                })
-                //
-                //                Text(chatGPTResponse)
-                //                    .padding()
-                //            }
             }
         }
     }
