@@ -13,7 +13,7 @@ struct ContentView: View {
             ZStack {
                 Color("DarkBlue")
                     .ignoresSafeArea()
-                VStack (spacing: 0){
+                VStack(spacing: 0) {
                     Image(.textOnly)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -30,18 +30,16 @@ struct ContentView: View {
                     NavigationLink {
                         Screen2()
                     } label: {
-                        Button(action: {}, label: {
-                            Text("Get Started")
-                                .foregroundColor(.darkBlue)
-                                .padding(.horizontal, 20)
-                                .frame(width: 300)
-                        })
-                        .tint(.white)
-                        .buttonStyle(.borderedProminent)
-                        .buttonBorderShape(.capsule)
-                     
+                        Text("Get Started")
+                            .foregroundColor(.darkBlue)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 4)
+                            .frame(width: 300)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
                     }
                 }
+                .navigationBarBackButtonHidden()
                 .padding()
             }
         }

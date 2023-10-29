@@ -10,25 +10,47 @@ import SwiftUI
 struct Screen2: View {
     var body: some View {
         ZStack {
-            Image(.mountain)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+            Color.darkBlue
                 .ignoresSafeArea()
             VStack {
+                Spacer()
+                HStack {
+                    Image(.mountainOnly)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(minWidth: 0, maxWidth: 200)
+                        .edgesIgnoringSafeArea(.all)
+                    Spacer()
+                }
+            }
+            
+            VStack(spacing: 90) {
                 NavigationLink(destination: {
                     ConfirmedDestination()
                 }, label: {
                     Text("I have a destination in mind")
-                    // add clipshape in order to get it to be a rounded Button
-
+                        .foregroundColor(.darkBlue)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
+                        .frame(width: 300)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 25))
+                    
                 })
-
+                
                 NavigationLink(destination: {
                     RandomDestination()
                 }, label: {
-                    Text("Take me wherever ")
-                    // add clipshape in order to get it to be a rounded Button
-
+                    HStack {
+                        Text("Take Me Wherever ")
+                            .foregroundColor(.darkBlue)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 20)
+                            .frame(width: 300)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                    }
+                    
                 })
             }
         }

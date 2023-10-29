@@ -14,14 +14,15 @@
 		A8B4325B2AED8CE900F5F954 /* Screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4325A2AED8CE900F5F954 /* Screen2.swift */; };
 		A8B4325D2AED8D1100F5F954 /* ConfirmedDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4325C2AED8D1100F5F954 /* ConfirmedDestination.swift */; };
 		A8B4325F2AED8D1A00F5F954 /* RandomDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */; };
-		A8B432612AED911800F5F954 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432602AED911800F5F954 /* Backend.swift */; };
 		A8B432632AED9B1B00F5F954 /* IndividualTripSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */; };
 		A8B432652AED9B2F00F5F954 /* TripSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */; };
 		A8B432672AEDAB0B00F5F954 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432662AEDAB0B00F5F954 /* Package.swift */; };
 		A8B4326A2AEDAB6B00F5F954 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = A8B432692AEDAB6B00F5F954 /* OpenAI */; };
-		A8B4326E2AEDB61400F5F954 /* CompletionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */; };
 		A8B432712AEDBDDC00F5F954 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432702AEDBDDC00F5F954 /* Itinerary.swift */; };
 		A8B432732AEDBE2200F5F954 /* DailyItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */; };
+		A8B432972AEDF5B500F5F954 /* GPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432962AEDF5B500F5F954 /* GPTView.swift */; };
+		A8B432992AEDF5D700F5F954 /* gptFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B432982AEDF5D700F5F954 /* gptFunction.swift */; };
+		A8B4329B2AEDF60700F5F954 /* gptFunctionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +34,14 @@
 		A8B4325A2AED8CE900F5F954 /* Screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen2.swift; sourceTree = "<group>"; };
 		A8B4325C2AED8D1100F5F954 /* ConfirmedDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmedDestination.swift; sourceTree = "<group>"; };
 		A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDestination.swift; sourceTree = "<group>"; };
-		A8B432602AED911800F5F954 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTripSuggestion.swift; sourceTree = "<group>"; };
 		A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSuggestions.swift; sourceTree = "<group>"; };
 		A8B432662AEDAB0B00F5F954 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionsResult.swift; sourceTree = "<group>"; };
 		A8B432702AEDBDDC00F5F954 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyItinerary.swift; sourceTree = "<group>"; };
+		A8B432962AEDF5B500F5F954 /* GPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTView.swift; sourceTree = "<group>"; };
+		A8B432982AEDF5D700F5F954 /* gptFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptFunction.swift; sourceTree = "<group>"; };
+		A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptFunctionStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				A8B4324C2AED8C9500F5F954 /* SherpaApp.swift */,
-				A8B432602AED911800F5F954 /* Backend.swift */,
-				A8B4326D2AEDB61400F5F954 /* CompletionsResult.swift */,
+				A8B432962AEDF5B500F5F954 /* GPTView.swift */,
+				A8B432982AEDF5D700F5F954 /* gptFunction.swift */,
+				A8B4329A2AEDF60700F5F954 /* gptFunctionStruct.swift */,
 				A8B4326F2AEDB62000F5F954 /* View */,
 				A8B432662AEDAB0B00F5F954 /* Package.swift */,
 				A8B432502AED8C9900F5F954 /* Assets.xcassets */,
@@ -98,9 +101,9 @@
 				A8B4324E2AED8C9500F5F954 /* ContentView.swift */,
 				A8B4325A2AED8CE900F5F954 /* Screen2.swift */,
 				A8B4325C2AED8D1100F5F954 /* ConfirmedDestination.swift */,
+				A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */,
 				A8B432642AED9B2F00F5F954 /* TripSuggestions.swift */,
 				A8B432622AED9B1B00F5F954 /* IndividualTripSuggestion.swift */,
-				A8B4325E2AED8D1A00F5F954 /* RandomDestination.swift */,
 				A8B432702AEDBDDC00F5F954 /* Itinerary.swift */,
 				A8B432722AEDBE2200F5F954 /* DailyItinerary.swift */,
 			);
@@ -183,17 +186,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B4329B2AEDF60700F5F954 /* gptFunctionStruct.swift in Sources */,
+				A8B432972AEDF5B500F5F954 /* GPTView.swift in Sources */,
 				A8B4325B2AED8CE900F5F954 /* Screen2.swift in Sources */,
 				A8B432732AEDBE2200F5F954 /* DailyItinerary.swift in Sources */,
 				A8B4324F2AED8C9500F5F954 /* ContentView.swift in Sources */,
 				A8B432652AED9B2F00F5F954 /* TripSuggestions.swift in Sources */,
 				A8B432672AEDAB0B00F5F954 /* Package.swift in Sources */,
 				A8B432712AEDBDDC00F5F954 /* Itinerary.swift in Sources */,
-				A8B432612AED911800F5F954 /* Backend.swift in Sources */,
 				A8B4325D2AED8D1100F5F954 /* ConfirmedDestination.swift in Sources */,
 				A8B432632AED9B1B00F5F954 /* IndividualTripSuggestion.swift in Sources */,
 				A8B4325F2AED8D1A00F5F954 /* RandomDestination.swift in Sources */,
-				A8B4326E2AEDB61400F5F954 /* CompletionsResult.swift in Sources */,
+				A8B432992AEDF5D700F5F954 /* gptFunction.swift in Sources */,
 				A8B4324D2AED8C9500F5F954 /* SherpaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
