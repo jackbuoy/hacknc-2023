@@ -19,7 +19,7 @@ struct GPTView: View {
             Text(gptFunction.response)
                 .padding()
             Button("Send Request to OpenAI") {
-                gptFunction.sendRequestToOpenAI()
+                gptFunction.sendRequestToOpenAI(city: "Italy", days: 2)
             }
         }
     }

@@ -10,8 +10,12 @@ import Foundation
 class gptFunction {
     public var response: String = ""
     public var loadedData: [OpenAIResponse] = []
+    
+    init(){
+        loadedData = []
+    }
 
-    func sendRequestToOpenAI() {
+    func sendRequestToOpenAI(city: String, days: Int) {
         let openaiApiKey = "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"
 
         guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else {
@@ -23,13 +27,21 @@ class gptFunction {
             "Authorization": "Bearer \(openaiApiKey)"
         ]
 
-        let message = [
-            "role": "user",
-            "content": "Give me a 3 day itinerary for Rome. Return the activities as a json file with an activity for morning, afternoon and evening."
+        let systemPrompt = [
+            "role": "system",
+            "content": """
+            Given a city, generate an itinerary for the given number of days in the city with morning, afternoon, and evening events. Make sure these events allow me to exlore & enjoy the city. Your output should be in the following JSON format: {"{day_number}": {"morning": {morning_event}, "afternoon": {afternoon_event}, "evening": {evening_event}}} Remember, your output should just be the JSON.
+            """
         ]
+        
+        let userMessage = [
+            "role": "user",
+            "content": "City: \(city), Days: \(String(days))"
+        ]
+        
         let requestData: [String: Any] = [
             "model": "gpt-3.5-turbo",
-            "messages": [message],
+            "messages": [systemPrompt, userMessage],
             "temperature": 0.7
         ]
         do {
