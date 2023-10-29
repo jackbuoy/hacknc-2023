@@ -9,18 +9,23 @@ import SwiftUI
 
 struct Itinerary: View {
     @State var days = 3
+    var data: String = ""
+    
+
     var body: some View {
         ZStack {
             Color.darkBlue.opacity(0.7)
                 .ignoresSafeArea()
+            
+            Text("\(data)")
 
-            TabView {
-                ForEach(0..<days){_ in
-                    DailyItinerary()
-                }
-            }
-            .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+//            TabView {
+//                ForEach(0..<days){_ in
+//                    DailyItinerary()
+//                }
+//            }
+//            .tabViewStyle(.page)
+//            .indexViewStyle(.page(backgroundDisplayMode: .always))
         }
     }
 }
