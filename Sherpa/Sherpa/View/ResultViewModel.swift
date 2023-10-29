@@ -10,9 +10,24 @@ import SwiftUI
 class ResultViewModel: ObservableObject{
     @Published var currentWeek: [Date] = []
     
+    @Published var currentDay: Date = Date()
+    
+    @Published var filteredActivities: [String]?
+    
     init(){
         fetchCurrentWeek()
+        //filterTodayTasks()
     }
+    
+//    func filterTodayTasks(){
+//        DispatchQueue(qos:  .userInteractive).async {
+//            let calendar  = Calendar.current
+//            
+//
+//            
+//        }
+//        
+//    }
     
     func fetchCurrentWeek(){
         let today = Date()
@@ -37,6 +52,12 @@ class ResultViewModel: ObservableObject{
         
         return formatter.string(from: date)
         
+    }
+    
+    func isToday(date: Date)->Bool {
+        let calendar = Calendar.current
+        
+        return calendar.isDate(currentDay, inSameDayAs: date)
     }
     
 }

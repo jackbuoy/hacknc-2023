@@ -9,26 +9,50 @@ import MapKit
 import SwiftUI
 
 struct ConfirmedDestination: View {
-    @State private var userInput: String = "" // This will store the user's input
+    @State private var selectedCity: String = ""
+    @State private var startDate = Date.now
+    @State private var endDate = Date.now// This will store the user's input
     var body: some View {
         ZStack {
-            Color.darkBlue.opacity(0.8)
+            Color.darkBlue.opacity(0.7)
                 .ignoresSafeArea()
-            VStack {
-                TextField("Enter text here", text: $userInput)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal, 40)
+            
+            VStack(spacing: 30) {
+                Spacer()
+                List {
+                    TextField(text: $selectedCity) {
+                        Text("Enter Destination")
+                    }
+                    
+                    DatePicker("Trip Start", selection: $startDate, displayedComponents: .date)
+                        .foregroundStyle(.darkBlue)
+                        .tint(.darkBlue)
+                        .padding(20)
+                   
+                    DatePicker("Trip End", selection: $endDate, displayedComponents: .date)
+                        .foregroundStyle(.darkBlue)
+                        .tint(.darkBlue)
+                        .padding(20)
+                       
+                }
+                .scrollContentBackground(.hidden)
+
                 NavigationLink(destination: {
-                    TripSuggestions()
+                    Result()
                 }, label: {
                     Text("See Suggestions ")
-                    // add clipshape in order to get it to be a rounded Button
-
+                        .foregroundColor(.darkBlue)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 20)
+                        .frame(width: 200)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 25))
                 })
             }
         }
     }
 }
+
 
 #Preview {
     ConfirmedDestination()
